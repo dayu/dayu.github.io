@@ -18,12 +18,8 @@
       }
     }
 
-    function autoUpdate() {
-      execute();
-    }
-
     input.change(function() {
-      autoUpdate();
+      output.val(b64_sha512(input.val()).substring(0, 12)).select();
     });
 
     $('#execute').click(execute);
