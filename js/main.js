@@ -38,7 +38,13 @@
 
     input.bind('input propertychange', function()  {
       output.prop('disabled', false);
+      if(!showpw[0].checked) {
+        output.prop('type', 'text');
+      }
       output.val(b64_sha512(input.val()).substring(0, 12))
+      if(!showpw[0].checked) {
+        output.prop('type', 'password');
+      }
       output.prop('disabled', true);
     });
 
