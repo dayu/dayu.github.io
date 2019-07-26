@@ -29,11 +29,11 @@
 
     showpw.bind("change", function() {
       if(showpw[0].checked) {
-        input.prop('type', 'password');
-        output.prop('type', 'password');
-      } else {
         input.prop('type', 'text');
         output.prop('type', 'text');
+      } else {
+        input.prop('type', 'password');
+        output.prop('type', 'password');
       }
     });
 
