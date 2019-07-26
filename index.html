@@ -21,13 +21,19 @@
             <form>
                 <label for="key-input">Master Key</label>
                 <input type="text" data-clear-btn="true" name="key-input" id="input">
+                <label>
+                    <input type="checkbox" name="checkbox-showkey" id="checkbox-showkey">Show Key
+                </label>
                 <label for="pw-output">Password</label>
                 <input type="text" name="pw-output" id="output">
                 <label>
-                    <input type="checkbox" name="checkbox-showpw" id="checkbox-showpw" checked>Show Password
+                    <input type="checkbox" name="checkbox-showpw" id="checkbox-showpw">Show Password
                 </label>
                 <input type="button" value="Copy" id="execute" >
             </form>
+
+            <p>Password is generated as the first 12 character of base64 encoding of SHA512 hash.
+            </p>
         </div>
     </div>
 

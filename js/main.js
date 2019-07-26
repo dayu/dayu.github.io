@@ -27,12 +27,18 @@
       }
     }
 
-    function showpassword() {
-      if(showpw[0].checked) {
+    function key() {
+      if(showkey[0].checked) {
         input.prop('type', 'text');
-        output.prop('type', 'text');
       } else {
         input.prop('type', 'password');
+      }
+    }
+
+    function showpassword() {
+      if(showpw[0].checked) {
+        output.prop('type', 'text');
+      } else {
         output.prop('type', 'password');
       }
     }
@@ -55,11 +61,17 @@
       }
     });
 
+    showkey.bind("change", function() {
+      showkey()
+    });
+
     showpw.bind("change", function() {
       showpassword()
     });
 
+    showkey();
     showpassword();
+    
     $('#execute').click(execute);
 
   });
