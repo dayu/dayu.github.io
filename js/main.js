@@ -12,6 +12,8 @@
       try {
 //        output.val(hex_sha512(input.val()).toUpperCase());
           output.val(b64_sha512(input.val()).substring(0, 12));
+          output.select();
+          document.execCommand("copy");
       } catch(e) {
         output.val(e);
       }
