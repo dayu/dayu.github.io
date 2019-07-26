@@ -12,8 +12,10 @@
       try {
 //        output.val(hex_sha512(input.val()).toUpperCase());
           output.val(b64_sha512(input.val()).substring(0, 12));
-          output.select();
+          output.prop('disabled', false);
+          output.val().select();
           document.execCommand("copy");
+          output.prop('disabled', true);
       } catch(e) {
         output.val(e);
       }
