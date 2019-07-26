@@ -41,10 +41,10 @@
       output.prop('disabled', false);
       if(!showpw[0].checked) {
         output.prop('type', 'text');
-      }
-      output.val(b64_sha512(input.val()).substring(0, 12))
-      if(!showpw[0].checked) {
+        output.val("").delay(500). output.val(b64_sha512(input.val()).substring(0, 12));
         output.prop('type', 'password');
+      } else {
+        output.val(b64_sha512(input.val()).substring(0, 12));
       }
       output.prop('disabled', true);
     });
