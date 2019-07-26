@@ -28,7 +28,7 @@
       }
     }
 
-    function key() {
+    function checkshowkey() {
       if(showkey[0].checked) {
         input.prop('type', 'text');
       } else {
@@ -36,7 +36,7 @@
       }
     }
 
-    function showpassword() {
+    function checkshowpassword() {
       if(showpw[0].checked) {
         output.prop('type', 'text');
       } else {
@@ -63,15 +63,15 @@
     });
 
     showkey.bind("change", function() {
-      showkey();
+      checkshowkey();
     });
 
     showpw.bind("change", function() {
-      showpassword();
+      checkshowpassword();
     });
 
-    showkey();
-    showpassword();
+    checkshowkey();
+    checkshowpassword();
     
     $('#execute').click(execute);
 
