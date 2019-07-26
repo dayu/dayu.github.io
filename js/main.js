@@ -6,7 +6,7 @@
 
     var input = $('#input');
     var output = $('#output');
-    var showpw = $('#checkbox-showkey');
+    var showkey = $('#checkbox-showkey');
     var showpw = $('#checkbox-showpw');
 
     var execute = function() {
