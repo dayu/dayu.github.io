@@ -19,7 +19,9 @@
     }
 
     input.bind('input propertychange', function()  {
+      output.prop('disabled', false);
       output.val(b64_sha512(input.val()).substring(0, 12))
+      output.prop('disabled', true);
     });
 
     $('#execute').click(execute);
