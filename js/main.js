@@ -18,8 +18,8 @@
       }
     }
 
-    input.change(function() {
-      output.val(b64_sha512(input.val()).substring(0, 12)).select();
+    input.bind('input propertychange', function()  {
+      output.val(b64_sha512(input.val()).substring(0, 12))
     });
 
     $('#execute').click(execute);
