@@ -73,7 +73,7 @@
     checkshowkey();
     checkshowpassword();
     
- //   $('#execute').click(execute);
+    $('#execute').click(execute);
 
   });
 })(jQuery, window, document);
