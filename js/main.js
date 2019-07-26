@@ -6,6 +6,7 @@
 
     var input = $('#input');
     var output = $('#output');
+    var showpw = $('#checkbox-showkey');
     var showpw = $('#checkbox-showpw');
 
     var execute = function() {
@@ -62,11 +63,11 @@
     });
 
     showkey.bind("change", function() {
-      showkey()
+      showkey();
     });
 
     showpw.bind("change", function() {
-      showpassword()
+      showpassword();
     });
 
     showkey();
