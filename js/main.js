@@ -10,7 +10,7 @@
 
     var execute = function() {
       try {
-        output.val(method(input.val(), option.val()));
+        output.val(hex_sha512(input.val()).UpperCase());
       } catch(e) {
         output.val(e);
       }
