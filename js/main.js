@@ -22,7 +22,7 @@
       execute();
     }
 
-    input.bind('change', function() {
+    input.change(function() {
       autoUpdate();
     });
 
