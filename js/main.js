@@ -32,8 +32,8 @@
         input.prop('type', 'password');
         output.prop('type', 'password');
       } else {
-        input.prop('type', 'input');
-        output.prop('type', 'input');
+        input.prop('type', 'text');
+        output.prop('type', 'text');
       }
     });
 
