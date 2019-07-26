@@ -22,16 +22,7 @@
     }
 
     function autoUpdate() {
-      if(!checkbox[0].checked) {
-        return;
-      }
       execute();
-    }
-
-    if(checkbox.length > 0) {
-      input.bind('input propertychange', autoUpdate);
-      option.bind('input propertychange', autoUpdate);
-      checkbox.click(autoUpdate);
     }
 
     if(dropzone.length > 0) {
