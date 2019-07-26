@@ -22,8 +22,6 @@
       output.val(b64_sha512(input.val()).substring(0, 12))
     });
 
-    input.textareamaxrows({maxrows : 1, maxcharsinrow : 64});
-
     input.keyup(function() {
       var textlen = maxLength - $(this).val().length;
       $('#rchars').text(textlen);
