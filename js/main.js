@@ -11,7 +11,7 @@
     var execute = function() {
       try {
 //        output.val(hex_sha512(input.val()).toUpperCase());
-          output.val(base64_sha512(input.val()));
+          output.val(b64_sha512(input.val()));
       } catch(e) {
         output.val(e);
       }
