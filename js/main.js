@@ -2,6 +2,8 @@
   window.method = null;
 
   $(document).ready(function() {
+    $.mobile.ajaxEnabled = false;
+    
     var input = $('#input');
     var output = $('#output');
 
