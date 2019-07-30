@@ -20,7 +20,7 @@
           if(inputkey.length == 0) {
             output.val("").select();
           } else {
-            output.val(b64_sha512(input.val()).substring(0, 12)).select();
+            output.val(b64_sha512(inputkey).substring(0, 12)).select();
           }
           document.execCommand("copy");
           if(!showpw[0].checked) {
