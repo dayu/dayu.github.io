@@ -16,8 +16,12 @@
           if(!showpw[0].checked) {
             output.prop('type', 'text');
           }
-          output.val(b64_sha512(input.val()).substring(0, 12)).select();
-          
+          inputkey = input.val();
+          if(inputkey.length == 0) {
+            output.val("").select();
+          } else {
+            output.val(b64_sha512(input.val()).substring(0, 12)).select();
+          }
           document.execCommand("copy");
           if(!showpw[0].checked) {
             output.prop('type', 'password');
