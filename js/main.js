@@ -49,20 +49,31 @@
     }
 
     input.bind('input propertychange', function()  {
-      output.prop('disabled', false);
-      if(!showpw[0].checked) {
-        output.prop('type', 'text');
+      var inputkey = input.val();
+      var outputpw;
+
+      if(inputkey.length == 0) {
         output.val("");
-        setTimeout(
-          function(){ 
-            output.val(b64_sha512(input.val()).substring(0, 12));
-            output.prop('type', 'password'); 
-            output.prop('disabled', true);
-          }, 
-          1000);
       } else {
-        output.val(b64_sha512(input.val()).substring(0, 12));
-        output.prop('disabled', true);
+        outputpw = b64_sha512(inputkey).substring(0, 12);
+     
+
+        output.prop('disabled', false);
+        if(!showpw[0].checked) {
+          
+          output.prop('type', 'text');
+          output.val(""); 
+          setTimeout(
+            function(){ 
+              output.val(outputpw);
+              output.prop('type', 'password'); 
+              output.prop('disabled', true);
+            }, 
+            1000);
+        } else {
+          output.val(outputpw);
+          output.prop('disabled', true);
+        }
       }
     });
 
